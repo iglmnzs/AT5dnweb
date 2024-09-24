@@ -1,0 +1,26 @@
+﻿@page
+@model AT5dnweb.Pages.CriarModel
+@{
+}
+<h2>Cadastrar Usuário</h2>
+
+<form method="post">
+    <div>
+        <label asp-for="Usuario.Nome"></label>
+        <input asp-for="Usuario.Nome" />
+        <span asp-validation-for="Usuario.Nome" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Usuario.Email"></label>
+        <input asp-for="Usuario.Email" />
+        <span asp-validation-for="Usuario.Email" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Usuario.DataNascimento"></label>
+        <input asp-for="Usuario.DataNascimento" type="date" />
+        <span asp-validation-for="Usuario.DataNascimento" class="text-danger"></span>
+    </div>
+    <button type="submit">Cadastrar</button>
+</form>
+
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
